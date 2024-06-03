@@ -1,0 +1,102 @@
+.footer {
+  background-color: #021d39;
+  color: #f8f9fa; /* Ensures text color is white */
+}
+
+.footer-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem; /* Adjusted for less margin below */
+  color: #f8f9fa; /* Ensures footer title color is white */
+}
+
+.footer-divider {
+  width: 100%; /* Adjust the width as needed */
+  border-top: 2px solid #5f97d1;
+  margin: 0.5rem auto 1.5rem; /* Adjusted for space around the line */
+}
+
+.cookie-consent {
+  background-color: #000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #f8f9fa; /* Ensures text color is white */
+}
+
+.text-light {
+  color: #f8f9fa !important;
+}
+
+.text-light:hover {
+  color: #adb5bd !important;
+}
+
+.footer-bottom {
+  background-color: #020f1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f8f9fa; /* Ensures text color is white */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f8f9fa; /* Ensures text color is white */
+}
+
+.first-level, .second-level {
+  max-width: 1000px; /* Set a max-width to ensure both levels have the same width */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  color: #f8f9fa; /* Ensures text color is white */
+}
+
+.col-md-5,
+.col-md-3,
+.col-md-6,
+.col-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  color: #f8f9fa; /* Ensures text color is white */
+  margin-bottom: 1rem; /* Ensures consistent margins */
+}
+
+.list-unstyled {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  color: #f8f9fa; /* Ensures text color is white */
+  margin-bottom: 1rem; /* Ensures consistent margins */
+}
+
+.footer-bottom .fab {
+  margin-left: 15px; /* Adjust the value as needed to move the icon further right */
+}
+
+.contact-info, .location-list, .training-list {
+  margin-bottom: 1rem; /* Ensures consistent margins */
+}
+
+/* Additional rules to ensure text color inside the footer is white */
+.footer a,
+.footer p,
+.footer li,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6 {
+  color: #f8f9fa !important;
+}
+
+.training-list {
+  text-align: center; /* Center align the Training Centers list */
+}
