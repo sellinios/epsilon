@@ -140,30 +140,32 @@ LOGGING = {
 
 # TinyMCE Configuration
 TINYMCE_DEFAULT_CONFIG = {
-    'height': 800,
-    'width': '100%',
+    'height': 360,
+    'width': 1120,
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 20,
+    'selector': 'textarea',
+    'theme': 'modern',
     'plugins': '''
-        advlist autolink lists link image charmap print preview anchor
-        searchreplace visualblocks code fullscreen insertdatetime media table paste code help wordcount
-        imagetools
+        textcolor save link image media preview codesample contextmenu
+        table code lists fullscreen  insertdatetime  nonbreaking
+        contextmenu directionality searchreplace wordcount visualblocks
+        visualchars code fullscreen autolink lists  charmap print  hr
+        anchor pagebreak
     ''',
-    'toolbar': '''
-        undo redo | formatselect | bold italic backcolor | alignleft aligncenter
-        alignright alignjustify | bullist numlist outdent indent | removeformat | help
-        | image | code
+    'toolbar1': '''
+        fullscreen preview bold italic underline | fontselect,
+        fontsizeselect  | forecolor backcolor | alignleft alignright |
+        aligncenter alignjustify | indent outdent | bullist numlist table |
+        | link image media | codesample |
     ''',
-    'image_advtab': True,
-    'file_picker_types': 'image',
-    'automatic_uploads': True,
-    'images_upload_url': '/upload/',
-    'images_reuse_filename': True,
-    'image_title': True,
-    'relative_urls': False,
-    'remove_script_host': False,
-    'document_base_url': '/',
-    'convert_urls': True,
-    'image_caption': True,
-    'image_description': True,
+    'toolbar2': '''
+        visualblocks visualchars |
+        charmap hr pagebreak nonbreaking anchor |  code |
+    ''',
+    'contextmenu': 'formats | link image',
+    'menubar': True,
+    'statusbar': True,
 }
 
 # Django Allauth configuration
