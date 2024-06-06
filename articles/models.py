@@ -1,10 +1,12 @@
 from django.db import models
 from django.utils.text import slugify
 
+
 class AuthUser(models.Model):
     # This is just a placeholder to show how the relationship works
     # Usually, this should be imported from django.contrib.auth.models
     pass
+
 
 class ArticlesCategory(models.Model):
     id = models.BigAutoField(primary_key=True)
@@ -18,6 +20,7 @@ class ArticlesCategory(models.Model):
         db_table = 'articles_category'
         verbose_name_plural = "Categories"
         managed = True
+
 
 class ArticlesArticle(models.Model):
     id = models.BigAutoField(primary_key=True)

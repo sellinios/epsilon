@@ -15,6 +15,8 @@ ALLOWED_HOSTS = ["site.epsilonhellas.com", "www.site.epsilonhellas.com", '127.0.
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'ckeditor',
+    'ckeditor_uploader',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -25,7 +27,6 @@ INSTALLED_APPS = [
     'articles',
     'slides',
     'api',
-    'tinymce',
     'dj_rest_auth',  # Add this line
     'allauth',
     'allauth.account',
@@ -44,6 +45,23 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',  # Add this line
 ]
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
 
 ROOT_URLCONF = 'backend.urls'
 
@@ -138,34 +156,13 @@ LOGGING = {
     },
 }
 
-# TinyMCE Configuration
-TINYMCE_DEFAULT_CONFIG = {
-    'height': 360,
-    'width': 1120,
-    'cleanup_on_startup': True,
-    'custom_undo_redo_levels': 20,
-    'selector': 'textarea',
-    'theme': 'modern',
-    'plugins': '''
-        textcolor save link image media preview codesample contextmenu
-        table code lists fullscreen  insertdatetime  nonbreaking
-        contextmenu directionality searchreplace wordcount visualblocks
-        visualchars code fullscreen autolink lists  charmap print  hr
-        anchor pagebreak
-    ''',
-    'toolbar1': '''
-        fullscreen preview bold italic underline | fontselect,
-        fontsizeselect  | forecolor backcolor | alignleft alignright |
-        aligncenter alignjustify | indent outdent | bullist numlist table |
-        | link image media | codesample |
-    ''',
-    'toolbar2': '''
-        visualblocks visualchars |
-        charmap hr pagebreak nonbreaking anchor |  code |
-    ''',
-    'contextmenu': 'formats | link image',
-    'menubar': True,
-    'statusbar': True,
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 400,
+        'width': '100%',
+    },
 }
 
 # Django Allauth configuration
