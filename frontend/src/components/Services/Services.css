@@ -1,0 +1,30 @@
+/* Services.css */
+.service-card {
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-img-top {
+  height: 150px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+.btn {
+  margin-top: auto;
+}

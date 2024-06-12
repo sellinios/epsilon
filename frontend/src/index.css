@@ -1,0 +1,30 @@
+/* General styles for the application */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Light grey background */
+  color: #212529; /* Dark grey text */
+}
+
+.App-header {
+  background-color: #343a40; /* Dark background for header */
+  padding: 1rem;
+}
+
+.nav-links .nav-link {
+  color: white;
+  margin: 0 0.5rem;
+}
+
+.nav-links .nav-link:hover {
+  color: #f8f9fa;
+}
+
+.cookie-consent {
+  background-color: #343a40; /* Dark background for cookie consent */
+  color: white;
+}
+
+.footer {
+  background-color: #343a40; /* Dark background for footer */
+  color: white;
+}

@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'prevetting',
     'dj_rest_auth.registration',  # Add this line
 ]
 
