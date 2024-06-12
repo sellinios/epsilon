@@ -39,9 +39,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/services" element={<Services />}>
-              <Route path="crew-management" element={<CrewManagement />} />
-              <Route path="crew-management/management-services" element={<CrewManagementServices />} />
-              <Route path="crew-management/manning-services" element={<CrewManningServices />} />
+              <Route path="crew-management" element={<CrewManagement />}>
+                <Route path="management-services" element={<CrewManagementServices />} />
+                <Route path="manning-services" element={<CrewManningServices />} />
+              </Route>
               <Route path="training-services" element={<TrainingServices />}>
                 <Route path="centers" element={<TrainingCenters />}>
                   <Route path="manila" element={<ManilaTrainingCenter />} />
@@ -61,10 +62,10 @@ function App() {
             <Route path="/news-events" element={<ArticleBlock />} />
             <Route path="/articles/:slug" element={<ArticleDetail />} />
             <Route path="/login" element={<Login />} />
-            <Route path="*" element={<h1>404 - Not Found</h1>} />
             <Route element={<PrivateRoute />}>
               <Route path="/dashboard" element={<Dashboard />} />
             </Route>
+            <Route path="*" element={<h1>404 - Not Found</h1>} />
           </Routes>
           <Footer />
         </div>

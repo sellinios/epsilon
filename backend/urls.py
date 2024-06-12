@@ -1,4 +1,3 @@
-# backend/urls.py
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -7,7 +6,7 @@ from articles.views import upload_image
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('prevetting.urls')),
+    path('api/', include('api.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('upload/', upload_image, name='upload_image'),
     path('dj-rest-auth/', include('dj_rest_auth.urls')),

@@ -1,0 +1,72 @@
+.footer-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.contact-info {
+  font-size: 0.9rem;
+}
+
+.footer-divider {
+  width: 60px;
+  height: 3px;
+  background-color: #fff;
+  margin: 0.5rem auto;
+}
+
+.location-list,
+.training-list {
+  font-size: 0.9rem;
+}
+
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.footer-bottom {
+  background: #343a40;
+}
+
+.footer-bottom p {
+  margin-bottom: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .footer-title {
+    font-size: 1.1rem;
+  }
+
+  .contact-info,
+  .location-list,
+  .training-list {
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-title {
+    font-size: 1rem;
+  }
+
+  .contact-info,
+  .location-list,
+  .training-list {
+    font-size: 0.75rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
+  }
+
+  .footer-bottom a {
+    font-size: 1.5rem;
+  }
+}

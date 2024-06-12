@@ -25,7 +25,6 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',  # Add this line
     'corsheaders',
     'articles',
-    'slides',
     'api',
     'dj_rest_auth',  # Add this line
     'allauth',
